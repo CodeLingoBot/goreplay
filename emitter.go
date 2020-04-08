@@ -8,7 +8,7 @@ import (
 )
 
 // Start initialize loop for sending data from inputs to outputs
-func Start(stop chan int) {
+func Start(stop <-chan int) {
 	if Settings.middleware != "" {
 		middleware := NewMiddleware(Settings.middleware)
 
